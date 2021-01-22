@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -u
+
+package_manager=pacman
+if [ -x "$(command -v yay)" ]; then
+  package_manager=yay
+fi
+
+pacmanfile_packages=$(grep -E '^[^#].+' < pacmanfile.txt)
+installed_packages=$($package_manager --query --explicit --quiet | sort --unique)
+
+to_install=$(diff --new-line-format="" --unchanged-line-format="" <(echo "$pacmanfile_packages") <(echo "$installed_packages"))
+if [ -n "$to_install" ]; then
+    $package_manager --sync $to_install
+fi
+
+to_remove=$(diff --new-line-format="" --unchanged-line-format="" <(echo "$installed_packages") <(echo "$pacmanfile_packages"))
+if [ -n "$to_remove" ]; then
+    $package_manager --remove --nosave --recursive $to_remove
+fi
+
+if [ -z "$to_install" ] && [ -z "$to_remove" ]; then
+    echo "Everything is synced"
+fi
