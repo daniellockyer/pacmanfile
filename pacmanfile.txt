@@ -30,6 +30,7 @@ cryptsetup
 device-mapper
 diffutils
 dmidecode
+dnscontrol
 docker-compose
 doctl
 e2fsprogs
@@ -99,6 +100,7 @@ linux-lts
 linux-lts-headers
 llvm
 logrotate
+lsof
 ltrace
 luit
 lvm2
@@ -155,6 +157,7 @@ pulseaudio-bluetooth
 pv
 python-pip
 python-resolvelib
+python-validity
 qt5-wayland
 rav1e
 reflector
