@@ -216,7 +216,6 @@ xdg-user-dirs
 xf86-input-libinput
 xf86-video-intel
 xorg-server
-xorg-xeyes
 xorg-xhost
 xorg-xinit
 xorg-xwayland
