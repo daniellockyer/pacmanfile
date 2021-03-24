@@ -153,7 +153,6 @@ psmisc
 pv
 python-pip
 python-resolvelib
-python-validity
 qt5-wayland
 rav1e
 reflector
