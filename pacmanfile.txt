@@ -143,7 +143,6 @@ pavucontrol
 pciutils
 perf
 perl
-pkgconf
 pipewire-pulse
 playerctl
 portmidi
