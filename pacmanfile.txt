@@ -1,8 +1,6 @@
 acpi
 acpi_call
 alacritty
-alsa-tools
-alsa-utils
 arandr
 asp
 autoconf
@@ -146,14 +144,12 @@ pciutils
 perf
 perl
 pkgconf
+pipewire-pulse
 playerctl
 portmidi
 powertop
 procps-ng
 psmisc
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
 pv
 python-pip
 python-resolvelib
